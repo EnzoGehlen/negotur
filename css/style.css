@@ -5,7 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 h4, h5, h6,
-h1, h2, h3 {margin-top: 0;}
+h1, h2, h3{margin-top: 0;}
 ul, ol {margin: 0;}
 p {margin: 0;}
 html, body{
@@ -13,12 +13,21 @@ html, body{
    font-size: 100%;
    background:#fff; 
 }
+.con-info h3 {
+    color: #ff9933;
+}
 /*--header start here--*/
 .header {
 	padding: 20px 0px;
+        background: #fff;
+         background: url(../images/ceu.jpeg);
+       
+       
 }
 .header-main {
   padding: 0px 25px 0px 10px;
+  /* position: fixed;*/
+  
 }
 .logo a h1 {
   font-size: 2em;
@@ -33,59 +42,52 @@ html, body{
 	float: left;
 	padding: 5px 0px 0px 0px;
 }
-.header-right {
+.header-left {
 	float: right;
 	text-align: center;
 	padding: 5px 0px 0px 0px;
 }
 .top-nav {
 	display: inline-block;
+       
+        
+        
+    
 }
 .top-nav  ul {
 	padding: 0px;
 	list-style: none;
+        
+        
 }
 .top-nav  ul li {
-	display: inline-block;
+	display: inline;
+        color:yellow;
 }
 .top-nav  ul li a {
-	font-size: 17px;
-	font-weight: 400;
+	font-size: 20px;
+	font-weight: 500;
 	padding:0px 10px;
         color: red;
+        
+        
+       
+        
 }
 .top-nav  ul li a:hover,.top-nav  ul li a.active {
 	text-decoration:none;
 	color: #ff9933;
+       
+			border-bottom:3px solid #ff9933;
 }
 span.menu{
      display:none;
+     
   }
-.search {
-	width: 100%;
-	background: #EBEBEB;
-	border-radius: 20px;
-	display: inline-block;
-}
-.search input[type="text"] {
-	border: none;
-	background: none;
-	outline: none;
-	width: 80%;
-	padding: 8px 0px 8px 12px;
-	-webkit-appearance: none;
-	font-size: 14px;
-	font-weight: 400;
-	color: #777;
-}
-.search input[type="submit"] {
-	background:url(../images/search.png)no-repeat;
-	height:18px;
-	border: none;
-	width: 16%;
-	outline: none;
-	vertical-align:middle;
-}
+  .header .img{
+      height: 120px;
+          width: 120px;
+  }
 .logo {
 	margin: 0px 45px 0px 0px;
 	display: inline-block;
@@ -117,13 +119,11 @@ span.head-line {
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 }
-.search input[type="text"] {
-	padding: 6px 0px 6px 10px;
-}
 }
 @media(max-width:480px){
 .top-nav {
 		float: right;
+               
 }
 .header-left {
 	margin: 7px 0px 0px 0px;
@@ -131,9 +131,7 @@ span.head-line {
 span.dot {
 	display: none;
 }
-.search {
-	display: none;
-}
+
 span.ser-img {
 	display: none;
 }
@@ -172,23 +170,24 @@ span.roundplay-bwn {
 .top-nav ul li a {
 	font-size: 16px;
 	padding: 0px 3px;
+        
 }
 }
 /*--header end here--*/
 /*--banner start here--*/
 .banner {
-	background: url(../images/mo.jpg)no-repeat;
-	min-height: 550px;
+	background: url(../images/busss.jpg)no-repeat;
+	min-height: 660px;
 	background-size: cover;
 }
 .banner1 {
-	background: url(../images/b3.jpg)no-repeat;
-	min-height: 550px;
+	background: url(../images/ita.jpg)no-repeat;
+	min-height: 660px;
 	background-size: cover;
 }
 .banner2 {
-	background: url(../images/b2.jpg)no-repeat;
-	min-height: 550px;
+	background: url(../images/ita.jpg)no-repeat;
+	min-height: 660px;
 	background-size: cover;
 }
 span.roundplay-bwn {
@@ -208,6 +207,7 @@ span.potrul-line {
 /*--- slider-css --*/
 .slider {
 	position: relative;
+        
 }
 .rslides {
   position: relative;
@@ -223,7 +223,7 @@ span.potrul-line {
   display: none;
   width: 100%;
   left: 0;
-  top: 0;
+  
   }
 .rslides li:first-child {
   position: relative;
@@ -707,6 +707,7 @@ h2.b-animate.b-from-left.b-delay03 {
 .b-animate-go:hover .b-animate{
 	visibility:visible;
 }
+
 .b-from-left{
 	position:relative;
 	left:-100%;
@@ -790,7 +791,9 @@ p.m_5 {
 }
 
 /* Self Clearing Goodness */
-.container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+.container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; 
+
+}
 .clearfix:before,
 .clearfix:after,
 .row:before,
@@ -1010,12 +1013,16 @@ span.port-lady {
 /*--footer start here--*/
 .footer {
 	padding: 20px 0px;
+        background-color:  #cecccc;
+       
+       
 }
 .footer-main p {
 	font-size: 16px;
 	font-weight: 400;
 	color: #000;
 	text-align: center;
+        color: #ff8a00;
 }
 .footer-main p a{
 	font-size: 16px;
@@ -1039,6 +1046,7 @@ span.port-lady {
 .about {
   background: #EBEBEB;
   padding: 50px 0px 50px 0px;
+ 
 }
 .about-top {
   text-align: center;
@@ -1081,6 +1089,7 @@ span.port-lady {
 .about-left {
   padding: 0px;
 }
+
 .our-team h3 {
   font-size: 30px;
   font-weight: 600;
@@ -1601,3 +1610,123 @@ span.port-lady {
 }
 }
 /*--friends end here--*/
+.h3{
+    color: #ff9933;
+}
+
+div.veiculo_imagens {
+    float: left;
+    width: 305px;
+}
+div.galeria_imagens, div.pacote_imagens {
+    float: left;
+    width: 605px;
+}
+
+div.img-veiculo, div.img-galeria, div.img-pacote{
+	float: left;
+    margin-right: 10px;
+	width: 140px;
+	height: 108px;
+	background: url("../img/site/bg_img-veiculo.jpg") no-repeat;
+	text-align: left;
+}
+div.img-veiculo img, div.img-galeria img, div.img-pacote img {
+	margin-top: 4px;
+	margin-left: 6px;
+	display: inline;
+}
+div.veiculo_descricao {
+    float: right;
+    width: 340px;
+    padding-bottom: 20px;
+}
+
+div.erros { color: red; margin-bottom: 10px;}
+div#f_contato { margin-left: 0px; }
+div#f_contato span.informe {color: red; font-size:11px; margin-left: 145px; margin-right: 20px;}
+div#f_contato span.red {color: red; font-size:12px;}
+div#f_contato p { margin-top: 5px; }
+div#f_contato label.lb_contato, div#f_contato label.lb_contato2 {
+	width: 135px;
+	float: left;
+	text-align: right;
+	margin-right: 5px;
+	display: block;
+}
+
+.footer-social {
+	padding-top: 20px;
+}
+
+.footer-social a {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	margin-right: 6px;
+	margin-bottom: 10px;
+	padding-top: 7px;
+	background:  #F9C16E;
+	-moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;
+    font-size: 32px;
+    color: #ddd;
+    line-height: 40px;
+    text-align: center;
+}
+.footer-social a:hover, .footer-social a:focus { background: #FFF; color: #F9C16E; }
+.footer-social a i { vertical-align: middle; }
+ .about-his{
+    text-align:  justify;
+  }
+  .about-his h4{
+    color: #ff8a00;
+    
+  }
+ 
+
+.h2, .titulo{
+    text-align: center;
+    margin-top: 20px;
+    color: orangered;
+    
+    
+ font-family:      serif;
+}
+.text--, p{
+        color: orangered;
+ 
+}
+.text--{
+    text-align: center;
+   
+    margin-left: -15px;
+       
+}
+.dl{
+    text-align: left;
+}
+
+.dt{
+    margin-left: 275px;
+    color: orange;
+    font-size: 23px;
+     
+}
+
+.dd{
+    margin-left: 295px;
+      text-align: justify;  
+ 
+}
+
+dd::before {
+    content: "→";
+    color: orangered;
+    font-size:  21px;
+}
+.index{
+    background: #EBEBEB;
+}
+
+
+    
