@@ -1,9 +1,9 @@
-<!--Author: W3layouts
+
 <?php
 $active = 4;
 include('../header.php');
 ?>
-    <body>
+ 
 
 <!--message start here-->
 <link rel="stylesheet" href="../css/swipebox.css">
@@ -13,6 +13,7 @@ include('../header.php');
         $(".swipebox").swipebox();
     });
 </script>
+   <body>
 <div class="frota">
     <div class="about">
         <div class="container">
