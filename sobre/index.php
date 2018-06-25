@@ -22,7 +22,7 @@ include('../header.php');
                 </div>
                 <div class="about-his">
                     <div class="col-md-4 about-left">
-                        <img src="images/ae.jpg" alt="" title="">
+                        <img src="../images/ae.jpg" alt="" title="">
                     </div>
 
                     <div class="col-md-8 about-right">
@@ -40,46 +40,7 @@ include('../header.php');
 
                     <div class="clearfix"> </div>
                 </div>
-                <div class="our-team">
-                    <h3>Our Team</h3>
-                    <div class="col-md-3 team-grid">
-                        <a href="images/b-t1.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
-                            <img src="images/t1.jpg" /><div class="b-wrapper">
-                            </div></a>
-                        <div class="team-details">
-                            <h4>McClintock</h4>
-                            <p>Co-founder& CEO</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 team-grid ma-more">
-                        <a href="images/b-t2.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
-                            <img src="images/t2.jpg" /><div class="b-wrapper">
-                            </div></a>
-                        <div class="team-details">
-                            <h4>Malorum</h4>
-                            <p>Co-founder</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 team-grid">
-                        <a href="images/b-t3.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
-                            <img src="images/t3.jpg" /><div class="b-wrapper">
-                            </div></a>
-                        <div class="team-details">
-                            <h4>Richard</h4>
-                            <p>Head Of Sale</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 team-grid mar-more">
-                        <a href="images/b-t4.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
-                            <img src="images/t4.jpg" /><div class="b-wrapper">
-                            </div></a>
-                        <div class="team-details">
-                            <h4>Bonorum</h4>
-                            <p>Operator</p>
-                        </div>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
+                
             </div>
         </div>
     </div>

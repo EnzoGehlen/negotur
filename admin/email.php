@@ -1,10 +1,12 @@
 <?php
-include('../conexao.php');
 include('cabecalho.php');
 include('menu.php');
+/*
+include('../conexao.php');
+
 $sql = "SELECT * FROM contato WHERE lido != true AND lixo != true";
 $result = $mysqli->query($sql);
-$lidos = mysqli_num_rows($result);
+$lidos = mysqli_num_rows($result);*/
 ?>
 
 
@@ -15,7 +17,7 @@ $lidos = mysqli_num_rows($result);
     <section class="content-header">
         <h1>
 
-            <small>Lucca Lounge & Fun</small>
+            <small>Nego Tur</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="index.php"><i class="fa fa-dashboard"></i> Início</a></li>
@@ -46,13 +48,13 @@ $lidos = mysqli_num_rows($result);
                                 ?>
                                 <li >
                                     <a href="email.php"><i class="fa fa-inbox"></i> Inbox
-                                        <span class="label label-primary pull-right"><?= $lidos ?></span></a></li>
+                                        <span class="label label-primary pull-right">php lidos</span></a></li>
 
                                 <li class="active"><a href="?url=lixo"><i class="fa fa-trash-o"></i>Excluídos</a></li>
                             <?php } else { ?>
                                 <li class="active" >
                                     <a href="email.php"><i class="fa fa-inbox"></i> Inbox
-                                        <span class="label label-primary pull-right"><?= $lidos ?></span></a></li>
+                                        <span class="label label-primary pull-right">php lidos</span></a></li>
 
                                 <li ><a href="?url=lixo"><i class="fa fa-trash-o"></i>Excluídos</a></li>
                                     <?php }

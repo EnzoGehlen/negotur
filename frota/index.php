@@ -38,7 +38,7 @@ include('../header.php');
                     </div>
                 </div>
                 <div class="col-md-3 team-grid">
-                    <a href="../images/m.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
+                    <a href="../images/micro.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
                         <img src="../images/micro.jpg" /><div class="b-wrapper">
                         </div></a>
                     <div class="team-details">
@@ -56,8 +56,8 @@ include('../header.php');
                     </div>
                 </div>
 
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <div class="col-md-3 team-grid">
+                
+                <div style='margin-top: 20px;' class="col-md-3 team-grid">
                     <a href="../images/m.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
                         <img src="../images/m.jpg" /><div class="b-wrapper">
                         </div></a>

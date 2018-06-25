@@ -71,6 +71,8 @@
 <script src="dist/js/demo.js"></script>
 <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="plugins/tinymce/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
 
 
 <!-- iCheck -->
