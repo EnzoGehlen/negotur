@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 switch ($action) {
-    case 'deleta': deleta($tabela);
+    case 'deleta': deleta($tabela, $id);
         break;
     case 'adiciona': adiciona($tabela);
         break;
@@ -26,9 +26,9 @@ switch ($action) {
         break;
 }
 
-function deletaEvento($id = null) {
+function deleta($tabela = null, $id = null) {
     include('../conexao.php');
-    $sql = "DELETE FROM eventos WHERE id = '$id'";
+    $sql = "DELETE FROM $tabela WHERE id = '$id'";
     if ($mysqli->query($sql) === TRUE) {
         echo "Record deleted successfully";
         header('location: eventos.php');
