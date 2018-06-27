@@ -1,14 +1,13 @@
 <?php
 include('cabecalho.php');
 include('menu.php');
-/*
+
 include('../conexao.php');
-$idEvento = $_GET['id'];
-$sql = "SELECT * FROM sobre WHERE id = 1";
+
+$sql = "SELECT * FROM sobre ";
 $result = $mysqli->query($sql);
 $dados = $result->fetch_assoc();
- * 
- */
+ 
 ?>
 
     <div class="content-wrapper">
@@ -37,15 +36,15 @@ $dados = $result->fetch_assoc();
                                     <input type="hidden" name='id' value=' $dados[id] '>
                                     <div class="form-group col-md-7">
                                         <label>Título:</label>
-                                        <input type="text" name='titulo' value=' $dados[titulo] ' class="form-control">
+                                        <input type="text" name='titulo' value=' <?=$dados['titulo']?> ' class="form-control">
                                     </div>
                                     <div class="form-group col-md-7">
                                         <label>Subtítulo:</label>
-                                        <input type="text" name='subtitulo' value=' $dados[subtitulo] ' class="form-control">
+                                        <input type="text" name='subtitulo' value='<?= $dados['subtitulo'] ?>' class="form-control">
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label>Texto:</label>
-                                        <textarea  name='texto' class="form-control"> $dados[texto]</textarea>
+                                        <textarea  name='texto' class="form-control"><?= $dados['texto']?></textarea>
                                     </div>
                                      <div class="form-group pull-right col-md-12">
                                         <label>Imagem atual</label>
@@ -53,8 +52,8 @@ $dados = $result->fetch_assoc();
                                     </div>
                                     <div class="form-group col-md-8">
                                         <label>Nova imagem</label>
-                                        <input type="file" name='imagem' value=' $dados[imagem]' id='imagem' >
-                                        <input type="hidden" name='imagemm' value=' $dados[imagem] ' >
+                                        <input type="file" name='imagem'  id='imagem' >
+                                        <input type="hidden" name='imagemm' value='<?= @$dados[imagem] ?>' >
                                     </div>
                                     
                                    
