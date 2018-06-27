@@ -60,7 +60,7 @@ $result = $mysqli->query($sql);
 
                                             <td><?=  substr($dados['descricao'], 0, 40); ?> ...  </td>
 
-                                            <td><img class='enzo' src="../images/frota/<?= $dados['imagem'] ?>" alt=""/></td>
+                                            <td><img class='enzo' style='max-height: 150px;' src="../images/frota/<?= $dados['imagem'] ?>" alt=""/></td>
 
 
 
