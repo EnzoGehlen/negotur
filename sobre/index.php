@@ -1,6 +1,10 @@
 <?php
 $active = 2;
 include('../header.php');
+include('../conexao.php');
+$sql = ("SELECT * FROM sobre");
+$result = $mysqli->query($sql);
+$dados = $result->fetch_assoc();
 ?>
 <body>
     <!--header start here-->
@@ -17,21 +21,17 @@ include('../header.php');
         <div class="container">
             <div class="about-main">
                 <div class="about-top">
-                    <h3>Nossa História</h3>
+                    <h3><?= $dados['titulo'] ?></h3>
 
                 </div>
                 <div class="about-his">
                     <div class="col-md-4 about-left">
-                        <img src="../images/ae.jpg" alt="" title="">
+                        <img src="../images/sobre/<?= $dados['imagem'] ?>" alt="" title="">
                     </div>
 
                     <div class="col-md-8 about-right">
-                        <h4>Na estrada desde 2000. Realizando viagens Nacionais e Internacionais</h4>
-                        <p>Tudo iniciou no ano de 2000 quando Neimar Trasel participou de uma licitação de transporte escolar, ganhando uma rota, teve que adquirir um veiculo para o transporte dos alunos, uma VW Combi ano 1978.<br>
-                            Em 2004 começou a transportar trabalhadores de um frigorifico da cidade de Itapiranga-SC. Em 2005 o proprietário teve que vender sua van Kia Besta para poder transportar os alunos e também acadêmicos da universidade da região. Neste ano adquiriu seu primeiro ônibus M-Benz/1518 1989<br>
-                            No ano de 2009 ouve uma grande procura por viagens acadêmicas, o proprietário Neimar conseguiu a aprovação do DETER ( Departamento de Transportes e Terminais), podendo então realizar viagens por todo estado catarinense, nesse momento necessitava-se um ônibus mais adequado um M-Benz/1621 e a compra de uma Van Fiat Ducato. Desde então, surgiu a empresa de Viagens e Turismo Nego Tur. <br>2011 foi realizada a compra do segundo ônibus, um M-Benz/0400 e em 2013 foi realizado o alvaliamento da ANNT (Agência Nacional de Transportes Terrestres), podendo então realizar viagens interestaduais e internacionais. <br>E em 2017 foi adquerido o primeiro ônibus Double Deck SCANIA/BUSCAR PANORAMICO DD com total conforto aos passageiros.
-
-
+                        <h4><?= $dados['subtitulo'] ?></h4>
+                        <p><?= $dados['texto'] ?>
 
 
                         </p>
