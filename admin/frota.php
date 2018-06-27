@@ -1,13 +1,12 @@
 <?php
 include('cabecalho.php');
 include('menu.php');
-/*
+
 include('../conexao.php');
 
-$sql = "SELECT * FROM eventos";
+$sql = "SELECT * FROM frota";
 $result = $mysqli->query($sql);
- * 
- */
+ 
 ?>
 
 
@@ -51,28 +50,27 @@ $result = $mysqli->query($sql);
                                 </thead>
                                 <tbody>
                                     <?php
-                                    /*
+                                    
                                     while ($dados = $result->fetch_assoc()) {
-                                        $novaData = explode("-", $dados['data']);
-                                     * 
-                                     */
+                                        
+                                     
                                         ?>
                                         <tr>
-                                            <td><? $dados['titulo'] ?></td>                                       
+                                            <td><?= $dados['titulo'] ?></td>                                       
 
-                                            <td><? "$novaData[2]/$novaData[1]/$novaData[0]" ?></td>
+                                            <td><?=  substr($dados['descricao'], 0, 40); ?> ...  </td>
 
-                                            <td><img class='enzo' src="../images/eventos/<? $dados['imagem'] ?>" alt=""/></td>
+                                            <td><img class='enzo' src="../images/frota/<?= $dados['imagem'] ?>" alt=""/></td>
 
 
 
                                             <td>
                                               
-                                                <a href='editEvento.php?id=<? $dados[id] ?>'><i class='fa fa-edit' title="Editar"></i></a>
-                                                <a href=''  data-toggle="modal" data-target="#<? $dados['id'] ?>"><i class='fa fa-trash' title="Excluir"></i></a></td>
+                                                <a href='editfrota.php?id=<?= $dados['id'] ?>'><i class='fa fa-edit' title="Editar"></i></a>
+                                                <a href=''  data-toggle="modal" data-target="#<?= $dados['id'] ?>"><i class='fa fa-trash' title="Excluir"></i></a></td>
                                         </tr>
 
-                                    <div class="modal modal-danger fade" id="<? $dados['id'] ?>">
+                                    <div class="modal modal-danger fade" id="<?= $dados['id'] ?>">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -81,11 +79,11 @@ $result = $mysqli->query($sql);
                                                     <h4 class="modal-title">Atenção</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <p>Você tem certeza que deseja excluir o evento <? $dados['titulo'] ?>?</p>
+                                                    <p>Você tem certeza que deseja excluir o evento <?= $dados['titulo'] ?>?</p>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
-                                                    <a href='crud.php?func=deleta&id=<? $dados[id] ?>'><button type="button"  class="btn btn-outline">Excluir</button></a>
+                                                    <a href='crud.php?action=deleta&tabela=frota&id=<?= $dados['id'] ?>'><button type="button"  class="btn btn-outline">Excluir</button></a>
                                                 </div>
                                             </div>
                                             <!-- /.modal-content -->
@@ -93,10 +91,9 @@ $result = $mysqli->query($sql);
                                         <!-- /.modal-dialog -->
                                     </div>
 
-                                    <?php/*
+                                    <?php
                                 }
-                                     * 
-                                     */
+                                     
                                 ?>
                                 </tbody>
                             </table>

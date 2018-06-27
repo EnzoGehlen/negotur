@@ -1,16 +1,15 @@
 <?php
 include('cabecalho.php');
 include('menu.php');
-/*
+
 include('../conexao.php');
-
-$sql = "SELECT * FROM eventos";
+$id = $_GET['id'];
+$sql = "SELECT * FROM frota WHERE id = $id";
 $result = $mysqli->query($sql);
- * 
- */
+$dados = $result->fetch_assoc();
+ 
 ?>
-
-    <div class="content-wrapper">
+<div class="content-wrapper">
          <section class="content-header">
             <h1>
 
@@ -19,7 +18,7 @@ $result = $mysqli->query($sql);
             <ol class="breadcrumb">
                 <li><a href="index.php"><i class="fa fa-dashboard"></i> Início</a></li>
                 <li><a href="frota.php">Frota</a></li>
-                <li class="active">Adicionando frota</li>
+                <li class="active">Editar frota</li>
             </ol>
         </section>
         <section >
@@ -29,28 +28,34 @@ $result = $mysqli->query($sql);
                     <div class="col-xs-12">
                         <div class="box box-info">
                             <div class="box-header">
-                                <h3 class="box-title">Adicionar novo veículo</h3>
+                                <h3 class="box-title">Editar veículo</h3>
                             </div>
                             <div class="box-body">
                                 <form action="crud.php" method='POST' enctype="multipart/form-data">
-                                    <input type="hidden" name='action' value='adiciona'>
+                                    <input type="hidden" name='action' value='edita'>
                                      <input type="hidden" name='tabela' value='frota'>
+                                     <input type="hidden" name='id' value="<?= $dados['id']?>">
                                     <div class="form-group col-md-6">
                                         <label>Título:</label>
-                                        <input type="text" name='titulo' class="form-control">
+                                        <input type="text" name='titulo' value="<?= $dados['titulo'] ?>" class="form-control">
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label>Descrição:</label>
-                                        <textarea name="descricao"  cols="30" rows="10"></textarea>
+                                        <textarea name="descricao"  cols="30" rows="10"><?= $dados['descricao'] ?></textarea>
                                     </div>
                                
+                                   <div class="form-group pull-right col-md-12">
+                                        <label>Imagem atual</label>
+                                        <img class='img img-responsive' style='max-height: 350px;' src="../images/frota/<?= $dados['imagem'] ?>" alt="" />
+                                    </div>
                                     <div class="form-group col-md-8">
-                                        <label>Imagem</label>
-                                        <input type="file" name='imagem' id='imagem' >
+                                        <label>Nova imagem</label>
+                                        <input type="file" name='imagem'  id='imagem' >
+                                        <input type="hidden" name='imagemm' value='<?= $dados['imagem']?>' >
                                     </div>
                                     <div class="form-group col-md-12">
                                         
-                                        <input type="submit" value="Adicionar" name="submit" class="btn btn-twitter">
+                                        <input type="submit" value="Salvar" name="submit" class="btn btn-twitter">
                                     </div>
 
 
