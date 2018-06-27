@@ -31,7 +31,7 @@ function deleta($tabela = null, $id = null) {
     $sql = "DELETE FROM $tabela WHERE id = '$id'";
     if ($mysqli->query($sql) === TRUE) {
         echo "Record deleted successfully";
-        header('location: eventos.php');
+        header('location: '.$tabela.'.php');
     } else {
         echo "Error deleting record: " . $mysqli->error;
     }
@@ -130,6 +130,7 @@ function edita($tabela = null) {
             break;
             
         case 'frota':
+            $id = $_POST['id'];
             $titulo = $_POST['titulo'];
             $descricao = $_POST['descricao'];
             $imagem = $_POST['imagem'];
@@ -162,7 +163,7 @@ function edita($tabela = null) {
                     echo "Sorry, there was an error uploading your file.<br>";
                 }
             }
-            $sql = ("UPDATE frota SET titulo = '$titulo',  descricao = '$descricao', imagem = '$imagem'");
+            $sql = ("UPDATE frota SET titulo = '$titulo',  descricao = '$descricao', imagem = '$imagem' WHERE id = '$id'");
 
             if ($mysqli->query($sql) === TRUE) {
                 echo "Record deleted successfully";
