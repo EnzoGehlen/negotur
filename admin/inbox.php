@@ -22,23 +22,14 @@ $result = $mysqli->query($sql);
                 </button>
                 <div class="btn-group">
                     <button type="button" onclick="move()"   class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
+
                 </div>
                 <!-- /.btn-group -->
-                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
-                <div class="pull-right">
-                    1-50/200
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></button>
-                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></button>
-                    </div>
-                    <!-- /.btn-group -->
-                </div>
+               
                 <!-- /.pull-right -->
             </div>
             <form name="formu" action="crud.php" method="POST">
-                <input type="hidden" name="aaa" value="lixo">
+                <input type="hidden" name="action" value="lixo">
             <div class="table-responsive mailbox-messages">
                 <table id="example1" class="table table-bordered table-striped">
                      
@@ -76,7 +67,7 @@ $result = $mysqli->query($sql);
                                 } 
                                 ?>
                                 <td class="mailbox-name"><a href="email.php?url=lendo&id=<?= $dados['id'] ?>"><?= $dados['nome'] ?></a></td>
-                                <td class="mailbox-subject"><b><?= $dados['titulo'] ?></b></td>
+                                <td class="mailbox-subject"><b><?= $dados['assunto'] ?></b></td>
                                     <td>  <?= substr($dados['mensagem'], 0, 40); ?> ... </td>
                                
                                 <td class="mailbox-date"><?= "$data[2]/$data[1]/$data[0] $novaData[1]" ?></td>

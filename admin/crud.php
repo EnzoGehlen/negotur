@@ -251,5 +251,5 @@ function excluiEmail() {
         $mysqli->query($moveu);
     }
 
-    header('location: email.php');
+    header('location: email.php?url=lixo');
 }
