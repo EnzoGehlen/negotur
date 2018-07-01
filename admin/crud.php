@@ -1,9 +1,10 @@
 <?php
-
+include('verifica.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $action = $_POST['action'];
-    $tabela = $_POST['tabela'];
+    @$action = $_POST['action'];
+    @$tabela = $_POST['tabela'];
+    
 } else {
 
     $action = $_GET['action'];
@@ -23,6 +24,11 @@ switch ($action) {
     case 'lixo': moveEmail();
         break;
     case 'excluiEmail': excluiEmail();
+        break;
+    case 'login': 
+        $id = $_POST['user'];
+        $senha = $_POST['pass'];
+        login($id, $senha);
         break;
 }
 
@@ -69,10 +75,10 @@ function adiciona($tabela = null) {
                     echo "Erro.<br>";
                 }
             }
-            
+
             $sql = ("INSERT INTO frota (titulo, descricao, imagem) VALUES ('$titulo', '$descricao', '$imagem')");
-            
-           
+
+
             break;
 
         case 'galeria':
@@ -110,7 +116,7 @@ function adiciona($tabela = null) {
     }
     if ($mysqli->query($sql) === TRUE) {
         echo "Adicionado!";
-        header('location: '.$tabela.'.php');
+        header('location: ' . $tabela . '.php');
     } else {
         echo "Erro: " . $mysqli->error;
     }
@@ -260,6 +266,7 @@ function moveEmail() {
     header('location: email.php');
 }
 
+
 function excluiEmail() {
     include('../conexao.php');
     $sql = "SELECT * FROM contato ";
@@ -274,4 +281,26 @@ function excluiEmail() {
     }
 
     header('location: email.php?url=lixo');
+}
+
+function login($id, $senha) {
+    include('../conexao.php');
+    $sql = ("SELECT * FROM n_users WHERE email = '$id'");
+    $result = $mysqli->query($sql);
+    $reg = mysqli_num_rows($result);
+
+    if ($reg == 1) {
+        $dados = $result->fetch_assoc();
+        if ($senha == $dados['senha']){
+            session_start(); 
+            $_SESSION["id_usuario"]= $dados["id"]; 
+            $_SESSION["nome_usuario"] = $dados["nome"];
+            header('location: index.php');
+            
+        } else {
+            echo "senha incorreta";
+        }
+    } else {
+        echo "email incorreto";
+    }
 }

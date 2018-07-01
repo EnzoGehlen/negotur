@@ -1,4 +1,5 @@
 <?php
+include('verifica.php');
 include('../conexao.php');
 $sql = "SELECT * FROM contato WHERE lido != true AND lixo != true";
 $result = $mysqli->query($sql);
