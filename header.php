@@ -44,7 +44,7 @@
 	<div class="container">
 		<div class="header-main">
                     <div class="logo">
-					<a href="../index.html"><img src="../images/turr.png"></a>
+					<a href="../"><img src="../images/turr.png"></a>
 				</div>
 			<div class="header-left">
                             <div class="top-nav">
@@ -53,57 +53,57 @@
                             switch (@$active){
                                 case 1: ?>
                             
-                            <li><a   href="../home/index.php" class="active">Início</a></li>
-                            <li><a href="../sobre/index.php">Sobre</a></li>
-				<li><a href="../servicos/index.php">Serviços</a></li>
-                                <li><a href="../frota/index.php">Frota</a></li>
-                                <li><a href="../pacotes/index.php">Pacotes Prontos</a></li>
-                                <li><a href="../contato/index.php">Contato</a></li>
+                            <li><a   href="../home/" class="active">Início</a></li>
+                            <li><a href="../sobre/">Sobre</a></li>
+				<li><a href="../servicos/">Serviços</a></li>
+                                <li><a href="../frota/">Frota</a></li>
+                                <li><a href="../pacotes/">Pacotes Prontos</a></li>
+                                <li><a href="../contato/">Contato</a></li>
                                  <?php
                                  break; 
                                 case 2: ?>
-                                <li><a   href="../home/index.php" >Início</a></li>
-                            <li><a href="../sobre/index.php" class="active">Sobre</a></li>
-				<li><a href="../servicos/index.php">Serviços</a></li>
-                                <li><a href="../frota/index.php">Frota</a></li>
-                                <li><a href="../pacotes/index.php">Pacotes Prontos</a></li>
-                                <li><a href="../contato/index.php">Contato</a></li>
+                                <li><a   href="../home/" >Início</a></li>
+                            <li><a href="../sobre/" class="active">Sobre</a></li>
+				<li><a href="../servicos/">Serviços</a></li>
+                                <li><a href="../frota/">Frota</a></li>
+                                <li><a href="../pacotes/">Pacotes Prontos</a></li>
+                                <li><a href="../contato/">Contato</a></li>
                                  <?php
                                  break; 
                                 case 3: ?>
-                                <li><a   href="../home/index.php" >Início</a></li>
-                            <li><a href="../sobre/index.php">Sobre</a></li>
-				<li><a href="../servicos/index.php" class="active">Serviços</a></li>
-                                <li><a href="../frota/index.php">Frota</a></li>
-                                <li><a href="../pacotes/index.php">Pacotes Prontos</a></li>
-                                <li><a href="../contato/index.php">Contato</a></li>
+                                <li><a   href="../home/" >Início</a></li>
+                            <li><a href="../sobre/">Sobre</a></li>
+				<li><a href="../servicos/" class="active">Serviços</a></li>
+                                <li><a href="../frota/">Frota</a></li>
+                                <li><a href="../pacotes/">Pacotes Prontos</a></li>
+                                <li><a href="../contato/">Contato</a></li>
                                  <?php
                                  break; 
                                 case 4: ?>
-                                <li><a   href="../home/index.php" >Início</a></li>
-                            <li><a href="../sobre/index.php">Sobre</a></li>
-				<li><a href="../servicos/index.php">Serviços</a></li>
-                                <li><a href="../frota/index.php" class="active">Frota</a></li>
-                                <li><a href="../pacotes/index.php">Pacotes Prontos</a></li>
-                                <li><a href="../contato/index.php">Contato</a></li>
+                                <li><a   href="../home/" >Início</a></li>
+                            <li><a href="../sobre/">Sobre</a></li>
+				<li><a href="../servicos/">Serviços</a></li>
+                                <li><a href="../frota/" class="active">Frota</a></li>
+                                <li><a href="../pacotes/">Pacotes Prontos</a></li>
+                                <li><a href="../contato/">Contato</a></li>
                                  <?php
                                  break; 
                                 case 5: ?>
-                                <li><a   href="../home/index.php" >Início</a></li>
-                            <li><a href="../sobre/index.php">Sobre</a></li>
-				<li><a href="../servicos/index.php">Serviços</a></li>
-                                <li><a href="../frota/index.php">Frota</a></li>
-                                <li><a href="../pacotes/index.php" class="active">Pacotes Prontos</a></li>
-                                <li><a href="../contato/index.php">Contato</a></li>
+                                <li><a   href="../home/" >Início</a></li>
+                            <li><a href="../sobre/">Sobre</a></li>
+				<li><a href="../servicos/">Serviços</a></li>
+                                <li><a href="../frota/">Frota</a></li>
+                                <li><a href="../pacotes/" class="active">Pacotes Prontos</a></li>
+                                <li><a href="../contato/">Contato</a></li>
                                  <?php
                                  break; 
                                 case 6: ?>
-                                <li><a   href="../home/index.php" >Início</a></li>
-                            <li><a href="../sobre/index.php">Sobre</a></li>
-				<li><a href="../servicos/index.php">Serviços</a></li>
-                                <li><a href="../frota/index.php">Frota</a></li>
-                                <li><a href="../pacotes/index.php">Pacotes Prontos</a></li>
-                                <li><a href="../contato/index.php" class="active">Contato</a></li>
+                                <li><a   href="../home/" >Início</a></li>
+                            <li><a href="../sobre/">Sobre</a></li>
+				<li><a href="../servicos/">Serviços</a></li>
+                                <li><a href="../frota/">Frota</a></li>
+                                <li><a href="../pacotes/">Pacotes Prontos</a></li>
+                                <li><a href="../contato/" class="active">Contato</a></li>
                             <?php break; } ?>
 			</ul>
 		</div>

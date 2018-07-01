@@ -32,8 +32,9 @@ $dados = $result->fetch_assoc();
                             </div>
                             <div class="box-body">
                                 <form action="crud.php" method='POST' enctype="multipart/form-data">
-                                    <input type="hidden" name='aaa' value='edita'>
-                                    <input type="hidden" name='id' value=' $dados[id] '>
+                                    <input type="hidden" name='action' value='edita'>
+                                     <input type="hidden" name='tabela' value='sobre'>
+                                    
                                     <div class="form-group col-md-7">
                                         <label>Título:</label>
                                         <input type="text" name='titulo' value=' <?=$dados['titulo']?> ' class="form-control">
@@ -48,7 +49,7 @@ $dados = $result->fetch_assoc();
                                     </div>
                                      <div class="form-group pull-right col-md-12">
                                         <label>Imagem atual</label>
-                                        <img class='img img-responsive' style='max-height: 350px;' src="../images/eventos/<?= $dados['imagem'] ?>" alt="" />
+                                        <img class='img img-responsive' style='max-height: 350px;' src="../images/sobre/<?= $dados['imagem'] ?>" alt="" />
                                     </div>
                                     <div class="form-group col-md-8">
                                         <label>Nova imagem</label>

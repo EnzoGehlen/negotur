@@ -5,7 +5,7 @@ include('../header.php');
 ?>
 <body>
     <!--header start here-->
-  
+
     <!--header end here-->
     <!--message start here-->
     <div class="message">
@@ -32,23 +32,30 @@ include('../header.php');
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 message-right">
-                        <form>
-                            <input type="text" value="Nome" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                        this.value = 'Name';
-                                                    }"/>
-                            <input type="text" value="Telefone" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                            this.value = 'Name';}"/>
-                            <input type="text" value="Cidade" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                            this.value = 'Name';
-                                                        }"/>
-                            <input type="text" class="mar-last" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                            this.value = 'Email';
-                                                        }"/>
-                            <textarea onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                            this.value = 'Message';
-                                                        }"/>Mensagem</textarea>
-                            <input type="submit" value="Enviar"/>
+                    <div class="col-md-6 ">
+                        <form method='POST' action='addContato.php'>
+                            <div class="form-group">
+                                <input type="text" name="nome" class="form-control" required id="name" placeholder="Nome" data-rule="minlen:4" data-msg="No mínimo 4 caracteres" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group cold-md-6">
+                                <input type="email" class="form-control " name="email" required id="email" placeholder="Email" data-rule="email" data-msg="Seu email não é válido" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group cold-md-6">
+                                <input type="text" class="form-control" name="telefone" required id="subject" placeholder="Telefone" data-rule="minlen:4" data-msg="Por favor, 4 caracteres no mínimo" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="assunto" required id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Por favor, 4 caracteres no mínimo" />
+                                <div class="validation"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" name="mensagem" rows="5" required data-msg="Por favor, escreva algo" placeholder="Mensagem"></textarea>
+                                <div class="validation"></div>
+                            </div>
+                            <button type="submit" class="btn btn-send">Enviar</button>
                         </form>
                     </div>
                     <div class="clearfix"> </div>

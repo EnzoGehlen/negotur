@@ -26,13 +26,17 @@ $dados = $result->fetch_assoc();
                 </div>
                 <div class="about-his">
                     <div class="col-md-4 about-left">
-                        <img src="../images/<?= $dados['imagem'] ?>" alt="" title="">
+                        <img src="../images/sobre/<?= $dados['imagem'] ?>" alt="" title="">
                     </div>
 
                     <div class="col-md-8 about-right">
                         <h4><?= $dados['subtitulo'] ?></h4>
                         <p><?= $dados['texto'] ?>
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> 21a619bf28abca7c559b11e1f69eaec1aaaca70e
 
 
                         </p>

@@ -1,10 +1,9 @@
 <?php
-/*include('../conexao.php');
+include('../conexao.php');
 
 $sql = "SELECT * FROM contato WHERE lixo != true";
 $result = $mysqli->query($sql);
- * 
- */
+ 
 ?>
 
 <div class="col-md-9">
@@ -23,23 +22,14 @@ $result = $mysqli->query($sql);
                 </button>
                 <div class="btn-group">
                     <button type="button" onclick="move()"   class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
+
                 </div>
                 <!-- /.btn-group -->
-                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
-                <div class="pull-right">
-                    1-50/200
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></button>
-                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></button>
-                    </div>
-                    <!-- /.btn-group -->
-                </div>
+               
                 <!-- /.pull-right -->
             </div>
             <form name="formu" action="crud.php" method="POST">
-                <input type="hidden" name="aaa" value="lixo">
+                <input type="hidden" name="action" value="lixo">
             <div class="table-responsive mailbox-messages">
                 <table id="example1" class="table table-bordered table-striped">
                      
@@ -58,14 +48,14 @@ $result = $mysqli->query($sql);
                    
                     <tbody>
                         
-                       <?php /*
+                       <?php 
                         while ($dados = $result->fetch_assoc()) {
                             $novaData = explode(" ", $dados['created']);
-                            $data = explode("-", $novaData[0]);*/
+                            $data = explode("-", $novaData[0]);
                             ?>
                             <tr>
                                 <td> <input name="<?= $dados['id']; ?>" value="<?= $dados['id']; ?>" type="checkbox"></td>
-                                <?php /*
+                                <?php 
                                 if ($dados['lido']) {
                                     ?>
                                 <td class="mailbox-star" title="lido"><i class="fa fa-star-o"></i> Lido</td>
@@ -74,16 +64,16 @@ $result = $mysqli->query($sql);
                                     <td class="mailbox-star" title="não lido"><i class="fa fa-star text-purple"></i></td>
 
                                     <?php
-                                } */
+                                } 
                                 ?>
                                 <td class="mailbox-name"><a href="email.php?url=lendo&id=<?= $dados['id'] ?>"><?= $dados['nome'] ?></a></td>
-                                <td class="mailbox-subject"><b><?= $dados['titulo'] ?></b></td>
+                                <td class="mailbox-subject"><b><?= $dados['assunto'] ?></b></td>
                                     <td>  <?= substr($dados['mensagem'], 0, 40); ?> ... </td>
                                
                                 <td class="mailbox-date"><?= "$data[2]/$data[1]/$data[0] $novaData[1]" ?></td>
                             </tr>
-                            <?php /*
-                        } */
+                            <?php 
+                        } 
                         ?>
                         
                     </tbody>

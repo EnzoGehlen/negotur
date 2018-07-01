@@ -33,14 +33,15 @@ $result = $mysqli->query($sql);
                             </div>
                             <div class="box-body">
                                 <form action="crud.php" method='POST' enctype="multipart/form-data">
-                                    <input type="hidden" name='aaa' value='adiciona'>
+                                    <input type="hidden" name='action' value='adiciona'>
+                                     <input type="hidden" name='tabela' value='frota'>
                                     <div class="form-group col-md-6">
                                         <label>Título:</label>
                                         <input type="text" name='titulo' class="form-control">
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label>Descrição:</label>
-                                        <textarea name="descricao" id="" cols="30" rows="10"></textarea>
+                                        <textarea name="descricao"  cols="30" rows="10"></textarea>
                                     </div>
                                
                                     <div class="form-group col-md-8">

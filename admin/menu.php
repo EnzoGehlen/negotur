@@ -1,9 +1,9 @@
 <?php
-/*include('../conexao.php');
+include('../conexao.php');
 $sql = "SELECT * FROM contato WHERE lido != true AND lixo != true";
 $result = $mysqli->query($sql);
 $lidos = mysqli_num_rows($result);
-*/
+
 ?>
 
 <aside class="main-sidebar">
@@ -51,13 +51,13 @@ $lidos = mysqli_num_rows($result);
                             <a href="email.php">
                                 <i class="fa fa-envelope"></i> <span>Contatos</span>
                                 <span class="pull-right-container">
-                                    <small class="label pull-right bg-purple"></small>
+                                    <small class="label pull-right bg-purple"> <?= $lidos ?></small>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="email.php">
-                                <i class="fa fa-users"></i> <span>Usuários</span>
+                            <a href="perfil.php">
+                                <i class="fa fa-users"></i> <span>Meu perfil</span>
                                 <span class="pull-right-container">
                                     <small class="label pull-right bg-purple"></small>
                                 </span>

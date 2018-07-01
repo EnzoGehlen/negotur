@@ -2,6 +2,10 @@
 <?php
 $active = 4;
 include('../header.php');
+include('../conexao.php');
+$sql = "SELECT * FROM frota";
+$result = $mysqli->query($sql);
+ 
 ?>
  
 
@@ -27,83 +31,24 @@ include('../header.php');
                 </div>
 
                 <h3>Confira nossos veiculos</h3>
-
-                <div class="col-md-3 team-grid">
-                    <a href="../images/m.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
-                        <img src="../images/van.jpg" /><div class="b-wrapper">
-                        </div></a>
+                <?php
+                while ($dados = $result->fetch_assoc()){ ?>
+                 <div style='margin-top: 20px;'  class="col-md-3 team-grid">
+                    <a href="../images/frota/<?= $dados['imagem']?>" class="b-link-stripe b-animate-go  swipebox"  title="<?= $dados['titulo'] ?>">
+                        <img style='max-height: 162px;'  class='img img-responsive' src="../images/frota/<?= $dados['imagem'] ?>" />
+                        <div class="b-wrapper">
+                        </div>
+                    </a>
                     <div class="team-details">
-                        <h4>McClintock</h4>
-                        <p>Co-founder& CEO</p>
+                        <h4><?=$dados['titulo'] ?></h4>
+                        <p><?= $dados['descricao'] ?></p>
                     </div>
                 </div>
-                <div class="col-md-3 team-grid">
-                    <a href="../images/micro.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
-                        <img src="../images/micro.jpg" /><div class="b-wrapper">
-                        </div></a>
-                    <div class="team-details">
-                        <h4>McClintock</h4>
-                        <p>Co-founder& CEO</p>
-                    </div>
-                </div>
-                <div class="col-md-3 team-grid">
-                    <a href="../images/m.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
-                        <img src="../images/m.jpg" /><div class="b-wrapper">
-                        </div></a>
-                    <div class="team-details">
-                        <h4>McClintock</h4>
-                        <p>Co-founder& CEO</p>
-                    </div>
-                </div>
-
-                
-                <div style='margin-top: 20px;' class="col-md-3 team-grid">
-                    <a href="../images/m.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
-                        <img src="../images/m.jpg" /><div class="b-wrapper">
-                        </div></a>
-                    <div class="team-details">
-                        <h4>McClintock</h4>
-                        <p>Co-founder& CEO</p>
-                    </div>
-                </div>
-                <div class="col-md-3 team-grid ma-more">
-                    <a href="../images/mm.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
-                        <img src="../images/mm.jpg" /><div class="b-wrapper">
-                        </div></a>
-                    <div class="team-details">
-                        <h4>Malorum</h4>
-                        <p>Co-founder</p>
-                    </div>
-                </div>
-                <div class="col-md-3 team-grid">
-                    <a href="../images/mmm.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
-                        <img src="../images/mmm.jpg" /><div class="b-wrapper">
-                        </div></a>
-                    <div class="team-details">
-                        <h4>Richard</h4>
-                        <p>MARCOPOLO PARADISO 1200 G6
-                            VOLKSVAGENS - 18310<br>
-                            SCANIA/MPOLO PARADISO R
-                            ano 2001</p>
-                    </div>
-                </div>
-                <div class="col-md-3 team-grid mar-more">
-                    <a href="../images/b-t4.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
-                        <img src="../images/mmmm.jpg" /><div class="b-wrapper">
-                        </div></a>
-                    <div class="team-details">
-                        <h4>Double Decker</h4>
-                        <p>Marcopolo DD 1800 ano 2007/2008<br>
-
-                            Scania K 380<br>
-
-                            50 Lugares, sendo 44 no piso superior e 6 no piso inferior com Sala em U<br>
-
-                            05 Monitores de TVs, som ambiente, DVD, CD Player<br>
-
-                            <b>Ônibus super completo</b><br></p>
-                    </div>
-                </div>
+                    <?php
+                }
+                ?>
+               
+               
                 <div class="clearfix"> </div>
             </div>
         </div>
