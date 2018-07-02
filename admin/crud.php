@@ -6,10 +6,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     @$tabela = $_POST['tabela'];
     
 } else {
-
+    
     $action = $_GET['action'];
-    $tabela = $_GET['tabela'];
-    $id = $_GET['id'];
+    @$tabela = $_GET['tabela'];
+    @$id = $_GET['id'];
+   
 }
 
 
@@ -29,6 +30,9 @@ switch ($action) {
         $id = $_POST['user'];
         $senha = $_POST['pass'];
         login($id, $senha);
+        break;
+    case 'logout': logout();
+        
         break;
 }
 
@@ -294,7 +298,7 @@ function login($id, $senha) {
     if ($reg == 1) {
         $dados = $result->fetch_assoc();
         if ($senha == $dados['senha']){
-            
+            @session_start();
             $_SESSION["id_usuario"]= $dados["id"]; 
             $_SESSION["nome_usuario"] = $dados["nome"];
             header('location: index.php');
@@ -305,4 +309,11 @@ function login($id, $senha) {
     } else {
         echo "email incorreto";
     }
+}
+
+function logout(){
+    session_start();
+    session_destroy();
+    header('location: index.php');
+    
 }
