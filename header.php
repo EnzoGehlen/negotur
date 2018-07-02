@@ -55,7 +55,7 @@
                             
                             <li><a   href="../home/" class="active">Início</a></li>
                             <li><a href="../sobre/">Sobre</a></li>
-				<li><a href="../servicos/">Serviços</a></li>
+				
                                 <li><a href="../frota/">Frota</a></li>
                                 <li><a href="../pacotes/">Pacotes Prontos</a></li>
                                 <li><a href="../contato/">Contato</a></li>
@@ -64,25 +64,17 @@
                                 case 2: ?>
                                 <li><a   href="../home/" >Início</a></li>
                             <li><a href="../sobre/" class="active">Sobre</a></li>
-				<li><a href="../servicos/">Serviços</a></li>
+				
                                 <li><a href="../frota/">Frota</a></li>
                                 <li><a href="../pacotes/">Pacotes Prontos</a></li>
                                 <li><a href="../contato/">Contato</a></li>
                                  <?php
                                  break; 
-                                case 3: ?>
-                                <li><a   href="../home/" >Início</a></li>
-                            <li><a href="../sobre/">Sobre</a></li>
-				<li><a href="../servicos/" class="active">Serviços</a></li>
-                                <li><a href="../frota/">Frota</a></li>
-                                <li><a href="../pacotes/">Pacotes Prontos</a></li>
-                                <li><a href="../contato/">Contato</a></li>
-                                 <?php
-                                 break; 
+                               
                                 case 4: ?>
                                 <li><a   href="../home/" >Início</a></li>
                             <li><a href="../sobre/">Sobre</a></li>
-				<li><a href="../servicos/">Serviços</a></li>
+				
                                 <li><a href="../frota/" class="active">Frota</a></li>
                                 <li><a href="../pacotes/">Pacotes Prontos</a></li>
                                 <li><a href="../contato/">Contato</a></li>
@@ -91,7 +83,7 @@
                                 case 5: ?>
                                 <li><a   href="../home/" >Início</a></li>
                             <li><a href="../sobre/">Sobre</a></li>
-				<li><a href="../servicos/">Serviços</a></li>
+				
                                 <li><a href="../frota/">Frota</a></li>
                                 <li><a href="../pacotes/" class="active">Pacotes Prontos</a></li>
                                 <li><a href="../contato/">Contato</a></li>
@@ -100,7 +92,7 @@
                                 case 6: ?>
                                 <li><a   href="../home/" >Início</a></li>
                             <li><a href="../sobre/">Sobre</a></li>
-				<li><a href="../servicos/">Serviços</a></li>
+				
                                 <li><a href="../frota/">Frota</a></li>
                                 <li><a href="../pacotes/">Pacotes Prontos</a></li>
                                 <li><a href="../contato/" class="active">Contato</a></li>

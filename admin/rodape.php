@@ -53,7 +53,10 @@
 <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <script src="plugins/tinymce/tinymce.min.js"></script>
-  <script>tinymce.init({ selector:'textarea' });</script>
+<script> tinymce.init({selector: 'textarea', height: 100,
+        plugins: 'advlist anchor autolink autoresize autosave charmap code codesample colorpicker contextmenu directionality emoticons  fullscreen help hr image imagetools importcss insertdatetime legacyoutput link lists media nonbreaking noneditable pagebreak paste preview print save searchreplace table template textcolor textpattern toc visualblocks visualchars wordcount',
+        toolbar1: "newdocument | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect | cut copy paste | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink anchor image media code | insertdatetime preview | forecolor backcolor | table | hr removeformat | subscript superscript | charmap emoticons | print fullscreen | ltr rtl | visualchars visualblocks nonbreaking template pagebreak restoredraft",
+        browser_spellcheck: true});</script>
 
 
 <!-- iCheck -->

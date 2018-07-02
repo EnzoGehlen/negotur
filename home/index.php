@@ -6,6 +6,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <?php
 $active = 1;
 include('../header.php');
+include('../conexao.php');
+$sql = ("SELECT * FROM home");
+$result = $mysqli->query($sql);
+$dados = $result->fetch_assoc();
 ?>
 
 <!--header end here-->
@@ -75,35 +79,12 @@ include('../header.php');
     <h2 class="titulo"><strong>DICAS DE VIAGEM</strong></h2>
 
     <div class="dicas">
-        <dl class="dl">
+        <p><?= $dados['dicas']?></p>
 
-            <dt class="dt">  <img src="../images/mala.png">BAGAGEM </dt><br>
-            <dd class="dd">Sempre a menor possível</dd>
-            <dd class="dd">Identifique a sua bagagem com nome, endereço e telefone, ponha as etiquetas em lugares visíveis e também dentro da mala</dd>
-            <dd class="dd">Leve roupas adequadas a estação</dd><br><br>
-
-            <dt class="dt">  <img src="../images/pills.png">REMÉDIOS </dt><br>
-            <dd class="dd">Para quem tem problemas crônicos, leve os remédios na viagem. Mas se for ao exterior, fazer um seguro saúde é a melhor opção</dd><br>           
-            <dt class="dt">  <img src="../images/cv.png">DOCUMENTOS </dt><br>
-            <dd class="dd"> PHP Básico</dd>
-            <dd class="dd"> PHP Intermediário</dd>
-            <dd class="dd"> PHP Avançado</dd><br><
-
-            <dt class="dt"> <img src="../images/hotel.png">CHEGANDO NA CIDADE</dt><br>
-            <dd class="dd">No hotel,confira a limpeza do quarto, se necessário, exija um quarto limpo, você pagou, você tem direito</dd>
-            <dd class="dd">Cuidado com os aparelhos eletrônicos, saiba primeiramente qual é a voltagem do lugar</dd>
-            <dd class="dd">No primeiro passeio, antes de sair, peça um cartão do hotel. Se você se perder, mostre o cartão e tudo estará resolvido</dd>
-            <dd class="dd">Na hora de comer,comece com pratos leves e vá se habituando aos poucos</dd><br>
-
-            <dt class="dt"> <img src="../images/wall-clock.png"> HORÁRIO DE EMBARQUE</dt><br>
-            <dd class="dd">Esteja com todos os documentos em mãos ou na bagagem de mão (passaporte, RG, Passagem ou Voucher) </dd>
-            <dd class="dd">
-                Em longas viagens é recomendável o uso de roupas e sapatos confortáveis</dd>
-            <dd class="dd">Não comer em excesso e, beba muito líquido</dd>
-            <dd class="dd">
-                Preocupe-se com suas bolsas, carteiras, pacotes e malas. Não peça e não aceite que outras pessoas transportem suas malas</dd>
-            <dd class="dd">Chegue com 1 hora de antecedência nas viagens de turismo realizadas com ônibus no local do embarque</dd>
-        </dl>
+    </div>
+    
+    <div class="dicas">
+        <p><?= $dados['galeria']?></p>
 
     </div>
                 
@@ -112,8 +93,61 @@ include('../header.php');
 <!--footer start here-->
 <?php
 include('galeria.php');
-include('../footer.php');
+
 ?>
-<!--footer end here-->
+<footer style=''>
+    <div class="footer">
+        <div class="container" style=''>
+            <div class="footer-main">
+                <p>   <strong>NegoTur Viagens e Turismo</strong><br>(49) 99134-6769<br> &copy;Copyright-Todos os direitos reservados
+
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--
+ BAGAGEM
+→Sempre a menor possível
+
+→Identifique a sua bagagem com nome, endereço e telefone, ponha as etiquetas em lugares visíveis e também dentro da mala
+
+→Leve roupas adequadas a estação
+
+ REMÉDIOS
+→Para quem tem problemas crônicos, leve os remédios na viagem. Mas se for ao exterior, fazer um seguro saúde é a melhor opção
+
+
+ DOCUMENTOS
+→ PHP Básico 
+
+→ PHP Intermediário 
+
+→ PHP Avançado
+
+
+ CHEGANDO NA CIDADE
+→ No hotel, confira a limpeza do quarto, se necessário, exija um quarto limpo, você pagou, você tem direito
+
+→ Cuidado com os aparelhos eletrônicos, saiba primeiramente qual é a voltagem do lugar
+
+→ No primeiro passeio, antes de sair, peça um cartão do hotel. Se você se perder, mostre o cartão e tudo estará resolvido
+
+→ Na hora de comer,comece com pratos leves e vá se habituando aos poucos
+  HORÁRIO DE EMBARQUE
+→ Esteja com todos os documentos em mãos ou na bagagem de mão (passaporte, RG, Passagem ou Voucher) 
+
+→ Em longas viagens é recomendável o uso de roupas e sapatos confortáveis
+
+→ Não comer em excesso e, beba muito líquido 
+
+→ Preocupe-se com suas bolsas, carteiras, pacotes e malas.
+
+→ Não peça e não aceite que outras pessoas transportem suas malas
+
+→ Chegue com 1 hora de antecedência nas viagens de turismo realizadas com ônibus no local do embarque
+-->
 </body>
 </html>
+
+

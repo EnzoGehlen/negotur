@@ -255,6 +255,16 @@ function edita($tabela = null) {
          
             $tabela = "index";
             break;
+    
+        case 'home':
+            $dicas = $_POST['dicas'];
+            $galeria = $_POST['galeria'];
+            
+            
+            $sql = ("UPDATE home SET dicas = '$dicas',  galeria = '$galeria'");
+         
+            $tabela = "index";
+            break;
     }
     if ($mysqli->query($sql) === TRUE) {
         echo "Record deleted successfully";

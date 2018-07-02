@@ -35,9 +35,10 @@ $dados2 = $result2->fetch_assoc();
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
                             </a>
-                            <ul class="treeview-menu">
+                            <ul class="treeview-menu"> 
+                                <li class="active"><a href="home.php"><i class="fa fa-file-text"></i> Home</a></li>
                                 <li class="active"><a href="sobre.php"><i class="fa fa-file-text"></i> Sobre</a></li>
-                                <li class="active"><a href="servicos.php"><i class="fa fa-file-text"></i> Serviços</a></li>
+                               
                                 <li class="active"><a href="frota.php"><i class="fa fa-file-text"></i> Frota</a></li>
                                 <li class="active"><a href="pacotes.php"><i class="fa fa-file-text"></i> Pacotes Prontos</a></li>
                                 

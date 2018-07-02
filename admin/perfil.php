@@ -38,10 +38,10 @@ $dados = $result->fetch_assoc();
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
 
-                        <li><a href="#settings" data-toggle="tab">Configurações</a></li>
+                        <li ><a href="#settings"  data-toggle="tab"  aria-expanded='true'><u>Configurações</u></a></li>
                     </ul>
                     <div class="tab-content">
-                        <div class="active tab-pane" id="activity">
+                        <div class="active tab-pane"  id="activity">
 
                             <!-- /.post -->
 

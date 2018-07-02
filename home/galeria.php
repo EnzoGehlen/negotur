@@ -6,11 +6,7 @@ $result = $mysqli->query($sql);
 <div class="portfolio">
         <div class="portfolio-main">
             <div class="portfolio-bottom">
-                <div class="port-nav-left">
-
-                    <h6>GALERIA</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor.</p>
-                </div>
+                
                 <div id="portfoliolist">
                     <?php
                     while ($dados = $result->fetch_assoc()){
