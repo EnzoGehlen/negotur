@@ -5,6 +5,10 @@ $sql = "SELECT * FROM contato WHERE lido != true AND lixo != true";
 $result = $mysqli->query($sql);
 $lidos = mysqli_num_rows($result);
 
+$sql2 = "SELECT * FROM n_users ";
+$result2 = $mysqli->query($sql2);
+$dados2 = $result2->fetch_assoc();
+
 ?>
 
 <aside class="main-sidebar">
@@ -16,7 +20,7 @@ $lidos = mysqli_num_rows($result);
                             <img src="dist/img/avatar5.png" class="img-circle" alt="User Image">
                         </div>
                         <div class="pull-left info">
-                            <p>Enzo Gehlen</p>
+                            <p><?= $dados2['nome'] ?></p>
                             <a> <i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>

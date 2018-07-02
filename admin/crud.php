@@ -245,12 +245,22 @@ function edita($tabela = null) {
 
 
             break;
+            
+        case 'n_users':
+            $nome = $_POST['nome'];
+            $email = $_POST['email'];
+            $senha = $_POST['senha'];
+            
+            $sql = ("UPDATE n_users SET nome = '$nome',  email = '$email', senha = '$senha'");
+         
+            $tabela = "index";
+            break;
     }
     if ($mysqli->query($sql) === TRUE) {
         echo "Record deleted successfully";
         header('location: ' . $tabela . '.php');
     } else {
-        echo "Error deleting record: " . $mysqli->error;
+        echo "Erro ao salvar: " . $mysqli->error;
     }
 }
 
@@ -304,11 +314,16 @@ function login($id, $senha) {
             header('location: index.php');
             
         } else {
-            echo "senha incorreta";
+            echo "<script> alert('Senha incorreta')</script> ";
+            echo "<script>window.location.replace('index.php');</script>";
+                    
+            
         }
     } else {
-        echo "email incorreto";
+            echo "<script> alert('Email incorreto')</script> ";
+            echo "<script>window.location.replace('index.php');</script>";
     }
+    
 }
 
 function logout(){
