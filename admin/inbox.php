@@ -2,7 +2,7 @@
 include('verifica.php');
 include('../conexao.php');
 
-$sql = "SELECT * FROM contato WHERE lixo != true";
+$sql = "SELECT * FROM vw_contatos";
 $result = $mysqli->query($sql);
  
 ?>

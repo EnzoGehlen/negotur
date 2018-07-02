@@ -1,6 +1,6 @@
 <?php 
 // Inicia sessões 
-session_start(); 
+@session_start(); 
  
 // Verifica se existe os dados da sessão de login 
 if(!isset($_SESSION["id_usuario"]) || !isset($_SESSION["nome_usuario"])) 

@@ -1,5 +1,5 @@
 <?php
-include('verifica.php');
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     @$action = $_POST['action'];
@@ -285,14 +285,16 @@ function excluiEmail() {
 
 function login($id, $senha) {
     include('../conexao.php');
+    
     $sql = ("SELECT * FROM n_users WHERE email = '$id'");
+
     $result = $mysqli->query($sql);
     $reg = mysqli_num_rows($result);
 
     if ($reg == 1) {
         $dados = $result->fetch_assoc();
         if ($senha == $dados['senha']){
-            session_start(); 
+            
             $_SESSION["id_usuario"]= $dados["id"]; 
             $_SESSION["nome_usuario"] = $dados["nome"];
             header('location: index.php');
