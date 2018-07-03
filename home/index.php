@@ -30,7 +30,7 @@ $dados = $result->fetch_assoc();
         <ul class="rslides" id="slider">
             <li>
                 <div class="banner">
-
+                   
                 </div>
             </li>
             <li>
